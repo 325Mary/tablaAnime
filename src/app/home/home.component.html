@@ -1,0 +1,34 @@
+<div class="container text-center mx-auto">
+    <h1><b>Ejercicio de tabla con formato Json</b></h1>
+    <br>
+  
+    <div class="d-flex flex-fill">
+      <table class="table mx-auto" *ngIf="jsonAnime">
+        <thead>
+          <tr>
+            <th>Nº</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Alianza</th>
+            <th>Origen</th>
+            <th>Titan</th>
+            <th>Muerte</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let anime of jsonAnime">
+            <td>{{ anime.id }}</td>
+            <td>{{ anime.name }}</td>
+            <td>{{ anime.Age }}</td>
+            <td>{{ anime.alliance }}</td>
+            <td>{{ anime.origin }}</td>
+            <td>{{ anime.titan }}</td>
+            <td>{{ anime.Death }}</td>
+            <td><img [src]="anime.img" alt="{{ anime.name }}" height="50"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
